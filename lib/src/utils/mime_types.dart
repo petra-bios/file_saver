@@ -9,6 +9,9 @@ enum MimeType {
     type: 'audio/aac',
   ),
 
+  ///[apng] for .apng extension
+  apng(name: 'APNG', type: 'image/apng'),
+
   ///[asice] for .asice
   asice(name: 'ASICE', type: 'application/vnd.etsi.asic-e+zip'),
 
@@ -117,7 +120,10 @@ enum MimeType {
   zip(
     name: 'ZIP',
     type: 'application/zip',
-  );
+  ),
+
+  ///Custom mimeType which is not yet added in the enum
+  custom(name: 'Custom', type: '');
 
   final String name;
   final String type;
